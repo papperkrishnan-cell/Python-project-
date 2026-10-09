@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-box {
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    width: 350px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-family: 'Cookie', cursive, sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.input-field input {
+    width: 100%;
+    height: 38px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 9px 8px 0px 8px;
+    font-size: 12px;
+    outline: none;
+}
+
+.input-field input:focus {
+    border-color: #a8a8a8;
+}
+
+.input-field label {
+    position: absolute;
+    left: 8px;
+    top: 11px;
+    color: #8e8e8e;
+    font-size: 12px;
+    transition: 0.1s ease;
+    pointer-events: none;
+}
+
+/* ഇൻപുട്ടിൽ ടൈപ്പ് ചെയ്യുമ്പോൾ ലേബൽ മുകളിലേക്ക് പോകാൻ */
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label {
+    top: 2px;
+    font-size: 9px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-primary {
+    width: 100%;
+    height: 32px;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #1877f2;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.or {
+    color: #8e8e8e;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 18px;
+}
+
+.forgot-pass {
+    color: #00376b;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.otp-desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
