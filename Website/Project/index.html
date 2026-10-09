@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Auth Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- ലോഗിൻ ബോക്സ് -->
+        <div class="auth-box" id="loginCard">
+            <h1 class="logo">Instagram</h1>
+            
+            <form id="loginForm">
+                <div class="input-field">
+                    <input type="text" id="username" required placeholder=" ">
+                    <label>Phone number, username, or email</label>
+                </div>
+                
+                <div class="input-field">
+                    <input type="password" id="password" required placeholder=" ">
+                    <label>Password</label>
+                    <span class="toggle-password" 
+                      <span class="toggle-password">Show</span>>Show</span>
+                </div>
+
+                <button type="submit" class="btn-primary" id="loginBtn">Log In</button>
+            </form>
+
+            <div class="divider">
+                <div class="line"></div>
+                <div class="or">OR</div>
+                <div class="line"></div>
+            </div>
+
+            <a href="#" class="forgot-pass">Forgot password?</a>
+        </div>
+
+        <!-- 2FA Verification ബോക്സ് (തുടക്കത്തിൽ മറഞ്ഞിരിക്കും) -->
+        <div class="auth-box hidden" id="otpCard">
+            <h2>Two-Factor Authentication</h2>
+            <p class="otp-desc">നിങ്ങളുടെ രജിസ്റ്റർ ചെയ്ത ഫോൺ നമ്പറിലേക്ക് 6-ഡിജിറ്റ് OTP അയച്ചിട്ടുണ്ട്.</p>
+            
+            <form id="otpForm">
+                <div class="input-field">
+                    <input type="text" id="otpInput" maxlength="6" required placeholder=" ">
+                    <label>Enter 6-Digit OTP</label>
+                </div>
+                <button type="submit" class="btn-primary">Verify & Confirm</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
